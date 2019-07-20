@@ -1,4 +1,3 @@
-'use strict';
 
 const fs = require('fs');
 const isWsl = require('is-wsl');
@@ -401,7 +400,7 @@ module.exports = function(webpackEnv) {
               use: getStyleLoaders({
                 importLoaders: 1,
                 modules: true,
-                localIdentName: '[name]__[hash:base64.5]',
+                localIdentName: '[name]__[local]__[hash:base64.5]',
                 sourceMap: isEnvProduction && shouldUseSourceMap,
               }),
               // Don't consider CSS imports dead code even if the
